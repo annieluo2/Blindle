@@ -146,16 +146,6 @@
                   </p>
                   <br>
                   <h5>
-                    Signal Select
-                  </h5>
-                  <p>
-                    Individual Braille elements are selected with a cross-power array that is controlled by a microcontroller (LPC1768) and two shift registers. Each shift register takes inputs from the output pins of the microcontroller, and shifts up to one byte of data between its output pins, allowing for sequential selection. In our cross-power array, one shift register is used to select columns and one shift register is used to control rows. By operating these shift registers at different speeds, it is possible to loop through all elements in each column before moving to the next column.
-                  </p>
-                  <p>
-                    Each shift register output is tied to the base of a transistor that is used to drive a relay. These relays are used to switch on and off the charging of capacitors that are used for sensation. While typically MOSFETs are used for switching signals, the large voltages and changing voltage across the capacitor being charged at each Braille cell make relays a more logical choice.
-                  </p>
-                  <br>
-                  <h5>
                     Electrotactle Stimulation
                   </h5>
                   <p>
@@ -164,6 +154,17 @@
                   <p>
                     Braille elements are charged by the signal select system, where the capacitor holds this charge until it is discharged when a finger passes across a metal pad connected to the capacitor.
                   </p>
+                  <br>
+                  <h5>
+                    Signal Select
+                  </h5>
+                  <p>
+                    Individual Braille elements are selected with a cross-power array that is controlled by a microcontroller (LPC1768) and two shift registers. Each shift register takes inputs from the output pins of the microcontroller, and shifts up to one byte of data between its output pins, allowing for sequential selection. In our cross-power array, one shift register is used to select columns and one shift register is used to control rows. By operating these shift registers at different speeds, it is possible to loop through all elements in each column before moving to the next column.
+                  </p>
+                  <p>
+                    Each shift register output is tied to the base of a transistor that is used to drive a relay. These relays are used to switch on and off the charging of capacitors that are used for sensation. While typically MOSFETs are used for switching signals, the large voltages and changing voltage across the capacitor being charged at each Braille cell make relays a more logical choice.
+                  </p>
+
                 </div>
                 <div class="col-sm-4" style="border-left: 1px dashed white;" style="text-align: center;">
                   <h1>
