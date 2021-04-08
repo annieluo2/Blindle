@@ -153,6 +153,7 @@
                     The crux of the Blindle project is being able to stimulate the nerves in a user’s finger to apply a phantom sensation of pressure, in lieu of a physical Braille pad. Sensation is directly tied to the current encountered by the nerves, which in turn is dependent upon how much power can be coupled through the skin. Blindle charges capacitors to a variable voltage that is specified by the user usually in the range of 60-100V, to deliver an electric impulse to the nerves in the user’s fingertips. While this voltage may seem large, the high impedance of human skin (which itself is a function of environmental and genetic factors) limits the resulting current to safe levels, usually no more than a couple of milliamps. This in turn provides a sensation akin to a small finger prick or a slight tingle.
                   </p>
                   <img src="images/node.png" width="50%" height="15%" class="center"/> 
+                  <br>
                   <p>
                     Braille elements are charged by the signal select system, where the capacitor holds this charge until it is discharged when a finger passes across a metal pad connected to the capacitor.
                   </p>
@@ -163,7 +164,8 @@
                   <p>
                     Individual Braille elements are selected with a cross-power array that is controlled by a microcontroller (LPC1768) and two shift registers. Each shift register takes inputs from the output pins of the microcontroller, and shifts up to one byte of data between its output pins, allowing for sequential selection. In our cross-power array, one shift register is used to select columns and one shift register is used to control rows. By operating these shift registers at different speeds, it is possible to loop through all elements in each column before moving to the next column.
                   </p>
-                  <img src="images/select.png" width="50%" height="15%" class="center"/>                  
+                  <img src="images/select.png" width="50%" height="15%" class="center"/>       
+                  <br>
                   <p>
                     Each shift register output is tied to the base of a transistor that is used to drive a relay. These relays are used to switch on and off the charging of capacitors that are used for sensation. While typically MOSFETs are used for switching signals, the large voltages and changing voltage across the capacitor being charged at each Braille cell make relays a more logical choice.
                   </p>
